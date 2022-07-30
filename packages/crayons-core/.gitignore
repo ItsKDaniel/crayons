@@ -12,6 +12,11 @@ crayons-react/*.ts
 .vuepress/public/build/
 css/
 
+vue/
+crayons-vue/vue-component-lib
+crayons-vue/*.ts
+!crayons-vue/index.ts
+
 *~
 *.sw[mnpcod]
 *.log

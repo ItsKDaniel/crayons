@@ -1,5 +1,6 @@
 import { Config } from '@stencil/core';
 import { reactOutputTarget } from 'react-output-target';
+import { vueOutputTarget } from '@stencil/vue-output-target';
 import { sass } from '@stencil/sass';
 import { postcss } from '@stencil/postcss';
 import postcssRTLCSS from 'postcss-rtlcss';
@@ -60,8 +61,17 @@ export const config: Config = {
       // includePolyfills: true,
 
       // tree shakable, need to use setassetpath
-      customElementsDir: 'dist/components',
-      includeImportCustomElements: true,
+      // customElementsDir: 'dist/components',
+      // includeImportCustomElements: true,
+    }),
+    vueOutputTarget({
+      componentCorePackage: `@freshworks/${packageName}`,
+      proxiesFile: './crayons-vue/components.ts',
+
+      // lazy load -> code splitting
+      // includeDefineCustomElements: true,
+      // customElementsDir: 'dist/components',
+      // includeDefineCustomElements: true,
     }),
   ],
   plugins: [

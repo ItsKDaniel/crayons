@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "lib": ["es6", "dom", "es2015"],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "target": "es2017",
+    "skipLibCheck": true,
+    "declaration": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "outDir": "vue"
+  },
+  "include": [
+    "crayons-vue/**/*.ts",
+    "crayons-vue/**/*.tsx",
+    "crayons-vue/package.json"
+  ],
+  "exclude": [
+    "**/__tests__/**"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false
+}
